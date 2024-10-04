@@ -1,0 +1,461 @@
+The target system is: Generic - 3.4.99 - arm
+The host system is: Windows - 10.0.22631 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/ncs/toolchains/c57af46cb7/opt/zephyr-sdk/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/3.20.5/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-zephyr-eabi-gcc.exe (Zephyr SDK 0.16.1) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__Users_IST_Documents_TCC_firmware_tcc_CMAKE_SOURCE_DIR_C__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_85e50 && [1/2] Building C object CMakeFiles/cmTC_85e50.dir/src.c.obj
+[2/2] Linking C executable cmTC_85e50
+
+
+Source file was:
+int main(void) { return 0; }
+Determining if files stdatomic.h exist passed with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_45a19 && [1/2] Building C object CMakeFiles/cmTC_45a19.dir/HAVE_STDATOMIC_H.c.obj
+[2/2] Linking C executable cmTC_45a19
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_45a19.dir/HAVE_STDATOMIC_H.c.obj: linker input file unused because linking not done
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_bc085 && [1/2] Building C object CMakeFiles/cmTC_bc085.dir/HAVE_FCNTL_H.c.obj
+[2/2] Linking C executable cmTC_bc085
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_bc085.dir/HAVE_FCNTL_H.c.obj: linker input file unused because linking not done
+
+
+
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_e4916 && [1/2] Building C object CMakeFiles/cmTC_e4916.dir/src.c.obj
+[2/2] Linking C executable cmTC_e4916
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e4916.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0_ succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_c589b && [1/2] Building C object CMakeFiles/cmTC_c589b.dir/src.c.obj
+[2/2] Linking C executable cmTC_c589b
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_c589b.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wall_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_174e8 && [1/2] Building C object CMakeFiles/cmTC_174e8.dir/src.c.obj
+[2/2] Linking C executable cmTC_174e8
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_174e8.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wformat__Wformat_security_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_b59a9 && [1/2] Building C object CMakeFiles/cmTC_b59a9.dir/src.c.obj
+[2/2] Linking C executable cmTC_b59a9
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_b59a9.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wformat__Wformat_zero_length_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_9a37f && [1/2] Building C object CMakeFiles/cmTC_9a37f.dir/src.c.obj
+[2/2] Linking C executable cmTC_9a37f
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_9a37f.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpointer_sign_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_0f3cb && [1/2] Building C object CMakeFiles/cmTC_0f3cb.dir/src.c.obj
+[2/2] Linking C executable cmTC_0f3cb
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_0f3cb.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpointer_arith_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_f6531 && [1/2] Building C object CMakeFiles/cmTC_f6531.dir/src.c.obj
+[2/2] Linking C executable cmTC_f6531
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_f6531.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wexpansion_to_defined_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_0792d && [1/2] Building C object CMakeFiles/cmTC_0792d.dir/src.c.obj
+[2/2] Linking C executable cmTC_0792d
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_0792d.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wlogical_op_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_ae54d && [1/2] Building C object CMakeFiles/cmTC_ae54d.dir/src.c.obj
+[2/2] Linking C executable cmTC_ae54d
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_ae54d.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wmissing_field_initializers_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_5fa62 && [1/2] Building C object CMakeFiles/cmTC_5fa62.dir/src.c.obj
+[2/2] Linking C executable cmTC_5fa62
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_5fa62.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpacked_bitfield_compat_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_3eec8 && [1/2] Building C object CMakeFiles/cmTC_3eec8.dir/src.c.obj
+[2/2] Linking C executable cmTC_3eec8
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_3eec8.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wvla_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_f44c1 && [1/2] Building C object CMakeFiles/cmTC_f44c1.dir/src.c.obj
+[2/2] Linking C executable cmTC_f44c1
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_f44c1.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wunused_but_set_variable_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_5e388 && [1/2] Building C object CMakeFiles/cmTC_5e388.dir/src.c.obj
+[2/2] Linking C executable cmTC_5e388
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_5e388.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Werror_implicit_int_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_776a3 && [1/2] Building C object CMakeFiles/cmTC_776a3.dir/src.c.obj
+[2/2] Linking C executable cmTC_776a3
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_776a3.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_mstack_protector_guard_global_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_ee089 && [1/2] Building C object CMakeFiles/cmTC_ee089.dir/src.c.obj
+[2/2] Linking C executable cmTC_ee089
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_ee089.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_freestanding_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_55de3 && [1/2] Building C object CMakeFiles/cmTC_55de3.dir/src.c.obj
+[2/2] Linking C executable cmTC_55de3
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_55de3.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_ffreestanding_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_25887 && [1/2] Building C object CMakeFiles/cmTC_25887.dir/src.c.obj
+[2/2] Linking C executable cmTC_25887
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_25887.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_gdwarf_4_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_bc75c && [1/2] Building C object CMakeFiles/cmTC_bc75c.dir/src.c.obj
+[2/2] Linking C executable cmTC_bc75c
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_bc75c.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___print_memory_usage succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_b692e && [1/2] Building C object CMakeFiles/cmTC_b692e.dir/src.c.obj
+[2/2] Linking C executable cmTC_b692e
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_b692e.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__pg succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_3d91c && [1/2] Building C object CMakeFiles/cmTC_3d91c.dir/src.c.obj
+[2/2] Linking C executable cmTC_3d91c
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_3d91c.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__mcpu_cortex_m33__mthumb__mabi_aapcs__mfp16_format_ieee succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_cc7f0 && [1/2] Building C object CMakeFiles/cmTC_cc7f0.dir/src.c.obj
+[2/2] Linking C executable cmTC_cc7f0
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_cc7f0.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___gc_sections succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_cfb58 && [1/2] Building C object CMakeFiles/cmTC_cfb58.dir/src.c.obj
+[2/2] Linking C executable cmTC_cfb58
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_cfb58.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___build_id_none succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_eed08 && [1/2] Building C object CMakeFiles/cmTC_eed08.dir/src.c.obj
+[2/2] Linking C executable cmTC_eed08
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_eed08.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___sort_common_descending succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_313b5 && [1/2] Building C object CMakeFiles/cmTC_313b5.dir/src.c.obj
+[2/2] Linking C executable cmTC_313b5
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_313b5.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___sort_section_alignment succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_e6080 && [1/2] Building C object CMakeFiles/cmTC_e6080.dir/src.c.obj
+[2/2] Linking C executable cmTC_e6080
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e6080.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__nostdlib succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_9b8ce && [1/2] Building C object CMakeFiles/cmTC_9b8ce.dir/src.c.obj
+[2/2] Linking C executable cmTC_9b8ce
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_9b8ce.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__static succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_9e77a && [1/2] Building C object CMakeFiles/cmTC_9e77a.dir/src.c.obj
+[2/2] Linking C executable cmTC_9e77a
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_9e77a.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl__X succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_d8fbc && [1/2] Building C object CMakeFiles/cmTC_d8fbc.dir/src.c.obj
+[2/2] Linking C executable cmTC_d8fbc
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_d8fbc.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl__N succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_62152 && [1/2] Building C object CMakeFiles/cmTC_62152.dir/src.c.obj
+[2/2] Linking C executable cmTC_62152
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_62152.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0__Wl___orphan_handling_warn succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_e44ef && [1/2] Building C object CMakeFiles/cmTC_e44ef.dir/src.c.obj
+[2/2] Linking C executable cmTC_e44ef
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_e44ef.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_asynchronous_unwind_tables_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_39c4d && [1/2] Building C object CMakeFiles/cmTC_39c4d.dir/src.c.obj
+[2/2] Linking C executable cmTC_39c4d
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_39c4d.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_ftls_model_local_exec_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_57311 && [1/2] Building C object CMakeFiles/cmTC_57311.dir/src.c.obj
+[2/2] Linking C executable cmTC_57311
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_57311.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_reorder_functions_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_c5291 && [1/2] Building C object CMakeFiles/cmTC_c5291.dir/src.c.obj
+[2/2] Linking C executable cmTC_c5291
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_c5291.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check__param_min_pagesize_0_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_125f3 && [1/2] Building C object CMakeFiles/cmTC_125f3.dir/src.c.obj
+[2/2] Linking C executable cmTC_125f3
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_125f3.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_defer_pop_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_800d7 && [1/2] Building C object CMakeFiles/cmTC_800d7.dir/src.c.obj
+[2/2] Linking C executable cmTC_800d7
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_800d7.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__Users_IST_Documents_TCC_firmware_tcc_CMAKE_SOURCE_DIR_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_65c1f && [1/2] Building C object CMakeFiles/cmTC_65c1f.dir/src.c.obj
+[2/2] Linking C executable cmTC_65c1f
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_65c1f.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__ncs_v2_5_2_zephyr_ZEPHYR_BASE_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_55f38 && [1/2] Building C object CMakeFiles/cmTC_55f38.dir/src.c.obj
+[2/2] Linking C executable cmTC_55f38
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_55f38.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fmacro_prefix_map_C__ncs_v2_5_2_WEST_TOPDIR_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_d7d72 && [1/2] Building C object CMakeFiles/cmTC_d7d72.dir/src.c.obj
+[2/2] Linking C executable cmTC_d7d72
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_d7d72.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_ffunction_sections_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_c2877 && [1/2] Building C object CMakeFiles/cmTC_c2877.dir/src.c.obj
+[2/2] Linking C executable cmTC_c2877
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_c2877.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fdata_sections_C__c__nostartfiles__nostdlib__isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include___isystem__c__ncs_toolchains_c57af46cb7_opt_zephyr_sdk_arm_zephyr_eabi_bin____lib_gcc_arm_zephyr_eabi_12_2_0_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___entry_0 succeeded with the following output:
+Change Dir: C:/Users/IST/Documents/TCC/firmware_tcc/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/ncs/toolchains/c57af46cb7/opt/bin/ninja.exe cmTC_fbe92 && [1/2] Building C object CMakeFiles/cmTC_fbe92.dir/src.c.obj
+[2/2] Linking C executable cmTC_fbe92
+arm-zephyr-eabi-gcc.exe: warning: CMakeFiles/cmTC_fbe92.dir/src.c.obj: linker input file unused because linking not done
+
+
+Source file was:
+int main(void) { return 0; }
