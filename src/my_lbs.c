@@ -15,11 +15,11 @@
 
 #include "my_lbs.h"
 
-LOG_MODULE_DECLARE(HardwareBinahki);
+LOG_MODULE_DECLARE(HardwareTCC);
 
-/* Declaração do serviço bluetooth binahki1 */
-BT_GATT_SERVICE_DEFINE(my_binahki1_svc,
-	BT_GATT_PRIMARY_SERVICE(BT_UUID_BINAHKI1),
+/* Declaração do serviço bluetooth tcc */
+BT_GATT_SERVICE_DEFINE(my_tcc_svc,
+	BT_GATT_PRIMARY_SERVICE(BT_UUID_TCC),
 
 	/* Create and add the SENSOR characteristic and its CCCD  */
 	BT_GATT_CHARACTERISTIC(BT_UUID_LBS_MYSENSOR3,
@@ -31,14 +31,15 @@ BT_GATT_SERVICE_DEFINE(my_binahki1_svc,
 		    BT_GATT_PERM_READ | BT_GATT_PERM_WRITE),
 );
 
-/* Função de inicialização da característica BINAHKI1 */
-int binahki1_init()
+/* Função de inicialização da característica TCC */
+int tcc_init()
 {
+	printk("Inicialização da caracteristica TCC\n");
 	return 0;
 }
 
 /* Função de envio dos dados por meio de notificação bluetooth */
 char sensors_notify(char* sensor3_value)		
 {
-	return bt_gatt_notify(NULL, &my_binahki1_svc.attrs[2], sensor3_value, strlen(sensor3_value));
+	return bt_gatt_notify(NULL, &my_tcc_svc.attrs[2], sensor3_value, strlen(sensor3_value));
 }

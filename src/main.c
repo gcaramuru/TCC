@@ -9,14 +9,9 @@
 #include <zephyr/bluetooth/gatt.h>
 #include "my_lbs.h"
 
-/* Bibliotaca LED */
-#include <dk_buttons_and_leds.h>
-
 /* Biliotecas GPIO */
 #include <hal/nrf_gpio.h>
 #include <zephyr/drivers/gpio.h>
-
-// #include <stdio.h>
 
 /* Bibliotecas de gerenciamento de energia */
 #include <zephyr/pm/pm.h>
@@ -37,15 +32,6 @@
 
 /* Biblioteca entrada analógica */
 #include <zephyr/drivers/adc.h>
-
-/* Biblioteca para reinicializar o código */
-// #include <zephyr/sys/reboot.h>
-
-/* Definição do nó do LED */
-#define LED5_NODE DT_ALIAS(led5)
-
-/* Struct que pega o nó do LED */
-static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED5_NODE, gpios);
 
 /* Definição do nó analógico */
 #define ADC_NODE DT_NODELABEL(adc)
@@ -92,7 +78,6 @@ static void exchange_func(struct bt_conn *conn, uint8_t att_err, struct bt_gatt_
 /* Definição do nó I2C */
 #define I2C_NODE DT_NODELABEL(i2c1)
 
-
 /* Declaração e inicialização de variáveis */
 #define BUFFER_MAX 240												// Valor máximo do buffer que auxilia na transformação dos valores em string
 #define RED_LED 0X4B												// Variável que controla a intensidade do led vermelho
@@ -136,7 +121,6 @@ static const struct bt_data sd[] = {
 void bq25180_setup()
 {
 	// Configuração inicial do bq25180
-	// bq25180_reset(true);
 	bq25180_enable_push_button(true);
 	bq25180_set_fastcharge_current(1000);								// Configura para 1000mA (1C)
 	bq25180_set_precharge_current(true); 								// Define para 10% da corrente de carga máxima
@@ -171,25 +155,19 @@ static void data_colection(const struct device *dev_i2c)
 	
 		setPulseAmplitudeRed(0x00);
 		setPulseAmplitudeIR(0x00);
-		// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
-		// k_msleep(14000);
-		// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
 	}
 	else{
 		presenca = 0;
         setPulseAmplitudeRed(0x00);
 		setPulseAmplitudeIR(0x00);
-		// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
-		// k_msleep(59000);
-		// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
 	}
 
 	/* Converção dos valores para string */
 	sprintf(bat, "%.2f", bateria);
 	sprintf(pre, "%d", presenca);
 
-	/* Construção da string que será enviada via BLE, no serviço BINAHKI1*/
-	snprintf(json_str, BUFFER_MAX, "{\"Presence\": %s, \"Battery\": %s}", pre, bat);		
+	/* Construção da string que será enviada via BLE, no serviço TCC*/
+	snprintf(json_str, BUFFER_MAX, "{\"Presenca\": %s, \"Bateria\": %s}", pre, bat);		
 }
 
 /* Função de chamada da thread responsável pelo envio de dados via BLE */
@@ -201,6 +179,7 @@ void send_data_thread(void)
 	while(1){
 
 		while(status == 1){
+			pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
 			tempo_inicial = tempo_em_ms();
 			tempo_atual = tempo_em_ms();
 
@@ -210,6 +189,7 @@ void send_data_thread(void)
 			/* Chamada das funções que fazem o envio dos dados via bluetooth */
 			sensors_notify(json_str);
 
+			pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
 			tempo_atual = tempo_em_ms();
 			k_msleep(60000 - (tempo_atual - tempo_inicial));
 		}
@@ -230,9 +210,9 @@ static void update_data_length(struct bt_conn *conn)
         .tx_max_time = BT_GAP_DATA_TIME_MAX,
     };
     err = bt_conn_le_data_len_update(conn, &my_data_len);
-    // if (err) {
-        // printk("data_len_update failed (err %d)", err);
-    // }
+    if (err) {
+        printk("data_len_update failed (err: %d)", err);
+    }
 }
 
 /* Função de configuração de tamanho do MTU */
@@ -242,9 +222,9 @@ static void update_mtu(struct bt_conn *conn)
     exchange_params.func = exchange_func;
 
     err = bt_gatt_exchange_mtu(conn, &exchange_params);
-    // if (err) {
-        // printk("bt_gatt_exchange_mtu failed (err %d)", err);
-    // }
+    if (err) {
+        printk("bt_gatt_exchange_mtu failed (err: %d)", err);
+    }
 }
 
 /* Função de callback para conexão BLE */
@@ -254,16 +234,15 @@ static void on_connected(struct bt_conn *conn, uint8_t err)
 	dev_i2c = DEVICE_DT_GET(I2C_NODE);
 
 	if (err) {
-		// printk("Falha de conexão (err %u)\n", err);
+		printk("Falha de conexão (err: %u)\n", err);
 		return;
 	}
-	// printk("Conectado\n");
+	printk("Conectado\n");
 	status = 1;
 	/* Chamada de funções para configuração de tamanho do MTU */
 	update_data_length(conn);
 	update_mtu(conn);
 
-	gpio_pin_set_dt(&led, 1);
 	pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
 }
 
@@ -273,9 +252,8 @@ static void on_disconnected(struct bt_conn *conn, uint8_t reason)
 	const struct device *dev_i2c;
 	dev_i2c = DEVICE_DT_GET(I2C_NODE);
 
-	// printk("Desconectado (reason %u)\n", reason);
+	printk("Desconectado (motivo: %u)\n", reason);
 	status = 0;
-	gpio_pin_set_dt(&led, 0);
 	setPulseAmplitudeRed(0x00);
 	setPulseAmplitudeIR(0x00);
 	pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
@@ -288,7 +266,7 @@ void on_le_data_len_updated(struct bt_conn *conn, struct bt_conn_le_data_len_inf
     uint16_t tx_time    = info->tx_max_time;
     uint16_t rx_len     = info->rx_max_len;
     uint16_t rx_time    = info->rx_max_time;
-    // printk("Data length updated. Length %d/%d bytes, time %d/%d us\n", tx_len, rx_len, tx_time, rx_time);	
+    printk("Comprimento de dado atualizado. Comprimento %d/%d bytes, tempo %d/%d us\n", tx_len, rx_len, tx_time, rx_time);	
 }
 
 /* Struct de callbacks BLE */
@@ -301,10 +279,10 @@ struct bt_conn_cb connection_callbacks = {
 /* Função para alteração de tamanho do MTU */
 static void exchange_func(struct bt_conn *conn, uint8_t att_err, struct bt_gatt_exchange_params *params)
 {
-	// printk("MTU exchange %s\n", att_err == 0 ? "successful" : "failed");
+	printk("MTU exchange %s\n", att_err == 0 ? "successful" : "failed");
     if (!att_err) {
         uint16_t payload_mtu = bt_gatt_get_mtu(conn) - 3;   // 3 bytes used for Attribute headers.
-        // printk("Novo MTU: %d bytes\n", payload_mtu);
+        printk("Novo MTU: %d bytes\n", payload_mtu);
     }
 }
 
@@ -316,67 +294,55 @@ void begining_thread(void)
 	const struct device *dev_i2c;
 	dev_i2c = DEVICE_DT_GET(I2C_NODE);
 
-	// printk("Hardware Binahki\n");
+	printk("Hardware TCC\n");
 	
 	/* Chamada da função de setup do controlador de carga */
 	bq25180_setup();
 
 	/* Chamada da função de inicialização do sensor MAX30102 */
-	err = max30102_Begin();
-	// if(err != 0){
-	// 	printk("Reeboting system\n");
-	// 	sys_reboot(SYS_REBOOT_COLD);
-	// }
+	max30102_Begin();
 
 	/* Inicialização da entrada analógica */
     if (!device_is_ready(adc_dev)) {
-        // printk("ADC não pronto\n");
+        printk("ADC não pronto\n");
         return;
     }
 
 	/* Configuração da entrada analógica */
     err = adc_channel_setup(adc_dev, &ch0_cfg_dt);
     if (err) {
-        // printk("Erro na configuração da entrada analógica: %d\n", err);
+        printk("Erro na configuração da entrada analógica: %d\n", err);
         return;
     }
-
-	/* Inicialização do led */
-	err = dk_leds_init();
-	if (err) {
-		// printk("Falha na inicialização dos LEDs (err %d)\n", err);
-		return;
-	}
 	
 	/* Inicialização do BLE */
 	err = bt_enable(NULL);
 	if (err) {
-		// printk("Falha na inicialização do Bluetooth (err %d)\n", err);
+		printk("Falha na inicialização do Bluetooth (err: %d)\n", err);
 		return;
 	}
 
 	/* Registro de callbacks do BLE */
     bt_conn_cb_register(&connection_callbacks);
 
-	/* Inicialização da característica BINAHKI1 */
-	err = binahki1_init();
+	/* Inicialização da característica TCC */
+	err = tcc_init();
 	if (err) {
-		// printk("Falha na inicialização da característica BINAHKI1 (err:%d)\n", err);
+		printk("Falha na inicialização da característica TCC (err: %d)\n", err);
 		return;
 	}
 
-	// printk("Bluetooth inicializado\n");
+	printk("BLE inicializado\n");
 
 	/* Inicialazação da publicidade BLE */
 	err = bt_le_adv_start(adv_param, ad, ARRAY_SIZE(ad), sd, ARRAY_SIZE(sd));
 	if (err) {
-		// printk("Falha no começo da publicidade (err %d)\n", err);
+		printk("Falha no começo da publicidade (err: %d)\n", err);
 		return;
 	}
 	
-	// printk("Publicidade inicializada\n");
+	printk("Publicidade inicializada\n");
 
-	gpio_pin_set_dt(&led, 0);
 	setPulseAmplitudeRed(0x00);
 	setPulseAmplitudeIR(0x00);
 }

@@ -12,6 +12,3 @@ target_sources(app PRIVATE
 
 # NORDIC SDK APP END
 zephyr_library_include_directories(.)
-
-# Adiciona o diretório do Network Core (child image)
-#add_subdirectory(build/hci_rpmsg)

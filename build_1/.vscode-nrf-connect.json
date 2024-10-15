@@ -1,0 +1,16 @@
+{
+  "board": "ubx_evknorab10_nrf5340_cpuapp",
+  "boardRevision": "",
+  "boardDir": "c:/ncs/v2.5.2/zephyr/boards/arm/ubx_evknorab10_nrf5340",
+  "shouldBuild": true,
+  "optimizations": "none",
+  "cmakeArgs": [],
+  "confFiles": [],
+  "buildDirectory": "build_1",
+  "kconfigFragments": [],
+  "snippets": [],
+  "dtcOverlays": [],
+  "extraDtcOverlays": [
+    "ubx_evknorab10_nrf5340_cpuapp.overlay"
+  ]
+}
