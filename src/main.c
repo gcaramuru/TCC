@@ -67,6 +67,8 @@ static struct bt_le_adv_param *adv_param = BT_LE_ADV_PARAM((BT_LE_ADV_OPT_CONNEC
 static struct bt_gatt_exchange_params exchange_params; 
 static void exchange_func(struct bt_conn *conn, uint8_t att_err, struct bt_gatt_exchange_params *params);
 
+static void pairing_confirm(struct bt_conn *conn);
+
 /* Definições do nome e comprimento do BLE */
 #define DEVICE_NAME             CONFIG_BT_DEVICE_NAME
 #define DEVICE_NAME_LEN         (sizeof(DEVICE_NAME) - 1)
@@ -138,7 +140,8 @@ uint32_t tempo_em_ms(void) {
 }
 
 /* Função de coleta dos dados */
-static void data_colection(const struct device *dev_i2c)
+// static void data_colection(const struct device *dev_i2c)
+static void data_colection()
 {
 	/* Leitura da bateria */
 	adc_read(adc_dev, &sequence);
@@ -146,50 +149,52 @@ static void data_colection(const struct device *dev_i2c)
     bateria = adc_voltage / VOLTAGE_DIVISOR_RATIO;
 
 	/* Leitura do sensor de batimento cardíaco e oximetria */
-	setPulseAmplitudeRed(RED_LED);
-    setPulseAmplitudeIR(IR_LED);
-	k_msleep(200); 
+	// setPulseAmplitudeRed(RED_LED);
+    // setPulseAmplitudeIR(IR_LED);
+	// k_msleep(200); 
 
-	if(max30102_GetIR() > LIMIAR_DETEC && max30102_GetRed() > LIMIAR_DETEC){
-		presenca = 1;
+	// if(max30102_GetIR() > LIMIAR_DETEC && max30102_GetRed() > LIMIAR_DETEC){
+	// 	presenca = 1;
 	
-		setPulseAmplitudeRed(0x00);
-		setPulseAmplitudeIR(0x00);
-	}
-	else{
-		presenca = 0;
-        setPulseAmplitudeRed(0x00);
-		setPulseAmplitudeIR(0x00);
-	}
+	// 	setPulseAmplitudeRed(0x00);
+	// 	setPulseAmplitudeIR(0x00);
+	// }
+	// else{
+	// 	presenca = 0;
+    //     setPulseAmplitudeRed(0x00);
+	// 	setPulseAmplitudeIR(0x00);
+	// }
 
-	/* Converção dos valores para string */
-	sprintf(bat, "%.2f", bateria);
-	sprintf(pre, "%d", presenca);
+	// /* Converção dos valores para string */
+	// sprintf(bat, "%.2f", bateria);
+	// sprintf(pre, "%d", presenca);
 
-	/* Construção da string que será enviada via BLE, no serviço TCC*/
-	snprintf(json_str, BUFFER_MAX, "{\"Presenca\": %s, \"Bateria\": %s}", pre, bat);		
+	// /* Construção da string que será enviada via BLE, no serviço TCC*/
+	// snprintf(json_str, BUFFER_MAX, "{\"Presenca\": %s, \"Bateria\": %s}", pre, bat);		
+	 snprintf(json_str, BUFFER_MAX, "Presenca: 1, Bateria: 3,6", pre, bat);	
 }
 
 /* Função de chamada da thread responsável pelo envio de dados via BLE */
 void send_data_thread(void)
 {	
-	const struct device *dev_i2c;
-	dev_i2c = DEVICE_DT_GET(I2C_NODE);
+	// const struct device *dev_i2c;
+	// dev_i2c = DEVICE_DT_GET(I2C_NODE);
 
 	while(1){
 
 		while(status == 1){
-			pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
+			// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
 			tempo_inicial = tempo_em_ms();
 			tempo_atual = tempo_em_ms();
 
 			/* Chamada da função de coleta de dados */
-			data_colection(dev_i2c);
+			// data_colection(dev_i2c);
+			data_colection();
 			
 			/* Chamada das funções que fazem o envio dos dados via bluetooth */
 			sensors_notify(json_str);
-
-			pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
+			printk("Dado enviado\n");
+			// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
 			tempo_atual = tempo_em_ms();
 			k_msleep(60000 - (tempo_atual - tempo_inicial));
 		}
@@ -230,8 +235,8 @@ static void update_mtu(struct bt_conn *conn)
 /* Função de callback para conexão BLE */
 static void on_connected(struct bt_conn *conn, uint8_t err)
 {
-	const struct device *dev_i2c;
-	dev_i2c = DEVICE_DT_GET(I2C_NODE);
+	// const struct device *dev_i2c;
+	// dev_i2c = DEVICE_DT_GET(I2C_NODE);
 
 	if (err) {
 		printk("Falha de conexão (err: %u)\n", err);
@@ -243,20 +248,20 @@ static void on_connected(struct bt_conn *conn, uint8_t err)
 	update_data_length(conn);
 	update_mtu(conn);
 
-	pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
+	// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_ON);
 }
 
 /* Função de callback para desconexão do BLE */
 static void on_disconnected(struct bt_conn *conn, uint8_t reason)
 {
-	const struct device *dev_i2c;
-	dev_i2c = DEVICE_DT_GET(I2C_NODE);
+	// const struct device *dev_i2c;
+	// dev_i2c = DEVICE_DT_GET(I2C_NODE);
 
 	printk("Desconectado (motivo: %u)\n", reason);
 	status = 0;
-	setPulseAmplitudeRed(0x00);
-	setPulseAmplitudeIR(0x00);
-	pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
+	// setPulseAmplitudeRed(0x00);
+	// setPulseAmplitudeIR(0x00);
+	// pm_device_action_run(dev_i2c, PM_DEVICE_ACTION_TURN_OFF);
 }
 
 /* Função de callback para alteração de tamanho do MTU */
@@ -276,6 +281,18 @@ struct bt_conn_cb connection_callbacks = {
 	.le_data_len_updated    = on_le_data_len_updated,
 };
 
+static void pairing_confirm(struct bt_conn *conn)
+{
+    printf("Confirming pairing with device.\n");
+    // Se você quiser confirmar o pareamento automaticamente:
+    // bt_conn_auth_confirm(conn);
+	bt_conn_auth_pairing_confirm(conn);
+    
+}
+struct bt_conn_auth_cb conn_auth_callbacks = {
+   .pairing_confirm = pairing_confirm,
+};
+
 /* Função para alteração de tamanho do MTU */
 static void exchange_func(struct bt_conn *conn, uint8_t att_err, struct bt_gatt_exchange_params *params)
 {
@@ -291,16 +308,16 @@ void begining_thread(void)
 {
 	int err;
     
-	const struct device *dev_i2c;
-	dev_i2c = DEVICE_DT_GET(I2C_NODE);
+	// const struct device *dev_i2c;
+	// dev_i2c = DEVICE_DT_GET(I2C_NODE);
 
 	printk("Hardware TCC\n");
 	
 	/* Chamada da função de setup do controlador de carga */
-	bq25180_setup();
+	// bq25180_setup();
 
 	/* Chamada da função de inicialização do sensor MAX30102 */
-	max30102_Begin();
+	// max30102_Begin();
 
 	/* Inicialização da entrada analógica */
     if (!device_is_ready(adc_dev)) {
@@ -324,7 +341,7 @@ void begining_thread(void)
 
 	/* Registro de callbacks do BLE */
     bt_conn_cb_register(&connection_callbacks);
-
+	bt_conn_auth_cb_register(&conn_auth_callbacks);
 	/* Inicialização da característica TCC */
 	err = tcc_init();
 	if (err) {
@@ -343,8 +360,8 @@ void begining_thread(void)
 	
 	printk("Publicidade inicializada\n");
 
-	setPulseAmplitudeRed(0x00);
-	setPulseAmplitudeIR(0x00);
+	// setPulseAmplitudeRed(0x00);
+	// setPulseAmplitudeIR(0x00);
 }
 
 /* Thread de inicialização do dispositivo */
